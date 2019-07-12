@@ -31,17 +31,7 @@ export function initScripts () : void {
                 input.value = "";
             }
         }
-    }
-	dataElement("filename").onchange = function (_ : Event) : void {
-
-		var filename = <HTMLTextAreaElement> element("filename");
-
-		if (!filename.value){
-            filename.value = "";
-		} else {
-
-		}
-	}
+    }	
 }
 
 var scripts : Script [] = [];
@@ -146,7 +136,8 @@ function refreshScripts (scripts : Script []) {
 
 export function uploadScript () {
     var input = inputElement ("scriptFile");
-	var filename = <HTMLTextAreaElement> element("filename");
+    var filename = inputElement("filename");
+    
     if (!input.value) {
         new ErrorPopupTile ("Uploading failed",
                 "None files selected", 5)

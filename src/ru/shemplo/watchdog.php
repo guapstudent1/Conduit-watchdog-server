@@ -68,7 +68,10 @@ class WatchdogController {
         $find = find_script($platform, $file["name"]);
 
         $data = json_decode ($context ["data"], true);
-
+        
+        if ($data['filename']=="") {
+            $data['filename']=$filename;
+        }
         if ($find === false){
             $scripts[$platform][$id]['name'] = $data["filename"];
             $scripts[$platform][$id]['file'] = $file ["name"];

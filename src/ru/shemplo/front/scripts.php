@@ -91,8 +91,11 @@
                                 </span>) 
                             </span>
                         </label>
+                        <br />
+                        <span><b>Script Name</b></span>
+                        <br>
                         <div>
-                            <textarea id="filename" class="form-textarea"></textarea>
+                            <input id="filename">
                         </div>
                         <button class="file-upload-button" 
                             onclick="__page_context.uploadScript ()">
